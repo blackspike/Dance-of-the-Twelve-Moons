@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>nav bar</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<style type="text/css"><!--
+.moonstyle {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12pt; font-weight: bold; color: #990000}
+.body {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; color: #000000}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="MM_preloadImages('/pages/navbar/images/snowbutton_f3.gif','/pages/navbar/images/snowbutton_f2.gif','/pages/navbar/images/snowbutton_f4.gif','/pages/navbar/images/fallbutton_f3.gif','/pages/navbar/images/fallbutton_f2.gif','/pages/navbar/images/fallbutton_f4.gif','/pages/navbar/images/beaverbutton_f3.gif','/pages/navbar/images/beaverbutton_f2.gif','/pages/navbar/images/beaverbutton_f4.gif','/pages/navbar/images/longnitebutton_f3.gif','/pages/navbar/images/longnitebutton_f2.gif','/pages/navbar/images/longnitebutton_f4.gif','/pages/navbar/images/contactbutton_f3.gif','/pages/navbar/images/contactbutton_f2.gif','/pages/navbar/images/contactbutton_f4.gif','/pages/navbar/images/copyritebutton_f3.gif','/pages/navbar/images/copyritebutton_f2.gif','/pages/navbar/images/copyritebutton_f4.gif','images/homebutton_f3.gif','images/homebutton_f2.gif','images/homebutton_f4.gif','images/introbutton_f3.gif','images/introbutton_f2.gif','images/introbutton_f4.gif','images/rosebutton_f3.gif','images/rosebutton_f2.gif','images/rosebutton_f4.gif','images/grassbutton_f3.gif','images/grassbutton_f2.gif','images/grassbutton_f4.gif','images/snowbutton_f3.gif','images/snowbutton_f2.gif','images/snowbutton_f4.gif','images/fallbutton_f3.gif','images/fallbutton_f2.gif','images/fallbutton_f4.gif','images/beaverbutton_f3.gif','images/beaverbutton_f2.gif','images/beaverbutton_f4.gif','images/longnitebutton_f3.gif','images/longnitebutton_f2.gif','images/longnitebutton_f4.gif','images/contactbutton_f3.gif','images/contactbutton_f2.gif','images/contactbutton_f4.gif','images/copyritebutton_f3.gif','images/copyritebutton_f2.gif','images/copyritebutton_f4.gif','images/gallerybutton_f3.gif','images/gallerybutton_f2.gif','images/gallerybutton_f4.gif')">
+<table width="13%" border="0" height="169" cellpadding="2" align="left">
+  <tr bgcolor="#FFFFFF"> 
+    <td class="moonstyle" height="38"> 
+      <div align="center" class="moonstyle"><img src="images/dancelogo.gif" width="94" height="94"></div>
+    </td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td><a href="../intro/intro.htm" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','homebutton','images/homebutton_f2.gif','images/homebutton_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','homebutton','images/homebutton_f3.gif',1);" target="mainFrame" ><img name="homebutton" src="images/homebutton.gif" width="94" height="19" border="0" onLoad="" alt="home"></a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td><a href="../prologue/prologue.html" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','introbutton','images/introbutton_f2.gif','images/introbutton_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','introbutton','images/introbutton_f3.gif',1);" target="mainFrame" ><img name="introbutton" src="images/introbutton.gif" width="94" height="19" border="0" onLoad="" alt="intro"></a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td><a href="../rosemoon/rosemoon.html" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','rosebutton','images/rosebutton_f2.gif','images/rosebutton_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','rosebutton','images/rosebutton_f3.gif',1);" target="mainFrame" ><img name="rosebutton" src="images/rosebutton.gif" width="94" height="19" border="0" onLoad="" alt="rosemoon"></a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td><a href="../grassmoon/grassmoon.html" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','grassbutton','images/grassbutton_f2.gif','images/grassbutton_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','grassbutton','images/grassbutton_f3.gif',1);" target="mainFrame" ><img name="grassbutton" src="images/grassbutton.gif" width="94" height="19" border="0" onLoad="" alt="grassmoon"></a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td><a href="../snowmoon/snowmoon.html" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','snowbutton','images/snowbutton_f2.gif','images/snowbutton_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','snowbutton','images/snowbutton_f3.gif',1);" target="mainFrame" ><img name="snowbutton" src="images/snowbutton.gif" width="94" height="19" border="0" onLoad="" alt="snowmoon"></a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td><a href="../fallingleaf/fallingleaf.html" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','fallbutton','images/fallbutton_f2.gif','images/fallbutton_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','fallbutton','images/fallbutton_f3.gif',1);" target="mainFrame" ><img name="fallbutton" src="images/fallbutton.gif" width="94" height="19" border="0" onLoad="" alt="fallingleaf"></a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td><a href="../beavermoon/beavermoon.html" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','beaverbutton','images/beaverbutton_f2.gif','images/beaverbutton_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','beaverbutton','images/beaverbutton_f3.gif',1);" target="mainFrame" ><img name="beaverbutton" src="images/beaverbutton.gif" width="94" height="19" border="0" onLoad="" alt="beavermoon"></a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td><a href="../longnite/longnight.html" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','longnitebutton','images/longnitebutton_f2.gif','images/longnitebutton_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','longnitebutton','images/longnitebutton_f3.gif',1);" target="mainFrame" ><img name="longnitebutton" src="images/longnitebutton.gif" width="94" height="19" border="0" onLoad="" alt="longnight"></a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td><a href="../backdropgallery/backdropgallery.html" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','gallerybutton','images/gallerybutton_f2.gif','images/gallerybutton_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','gallerybutton','images/gallerybutton_f3.gif',1);" target="mainFrame" ><img name="gallerybutton" src="images/gallerybutton.gif" width="94" height="19" border="0" onLoad="" alt="gallery"></a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td><a href="../contact/contact.html" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','contactbutton','images/contactbutton_f2.gif','images/contactbutton_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','contactbutton','images/contactbutton_f3.gif',1);" target="mainFrame" ><img name="contactbutton" src="images/contactbutton.gif" width="94" height="19" border="0" onLoad="" alt="contact"></a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td><a href="../Copyright/Copyright.html" onMouseOut="MM_nbGroup('out');"  onMouseOver="MM_nbGroup('over','copyritebutton','images/copyritebutton_f2.gif','images/copyritebutton_f4.gif',1);"  onClick="MM_nbGroup('down','navbar1','copyritebutton','images/copyritebutton_f3.gif',1);" target="mainFrame" ><img name="copyritebutton" src="images/copyritebutton.gif" width="94" height="19" border="0" onLoad="" alt="copyright"></a></td>
+  </tr>
+</table>
+<span class="moonstyle"></span>
+</body>
+</html>
